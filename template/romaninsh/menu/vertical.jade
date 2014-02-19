@@ -1,0 +1,36 @@
+ul.atk-menu.atk-menu-vertical(class="{$class}" id="{$_name}")
+    {Content}
+
+    {Title}
+    li.atk-padding-small.atk-size-kilo(id="{$_name}" class="{$class}") {$Content}
+    {/Title}
+
+    {Item}
+    li(id="{$_name}")
+        a.atk-padding-small.atk-cells(href="javascript: void(0)" class="{$class}")
+            span.atk-cell.atk-jackscrew
+                {$icon}&nbsp;
+                strong
+                    {$Content}
+            span.atk-cell {$Badge}
+    {/Item}
+
+    {Menu}
+    li(id="{$_name}")
+        a.atk-padding-small.atk-cells(href="#" class="{$class}")
+            span.atk-cell.atk-jackscrew
+                {$icon}&nbsp;
+                strong
+                    {$Content}
+            span.atk-cell
+                span.icon-right-dir
+        {$SubMenu}
+    {/Menu}
+
+    {Separator}
+    li
+        hr
+    {/Separator}
+
+    {/}
+

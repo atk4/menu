@@ -32,18 +32,20 @@ abstract class Menu extends \View {
 
         if(is_array($title)) {
 
+            /*
             // Allow to set custom classes on a element
             if($title['a']) {
                 $this->setComponents($title['a'],'a');
                 unset($title['a']);
             }
+             */
 
-            if($title['label']) {
+            if($title['badge']) {
                 $i->add('View',null,'Badge')
                     ->setElement('span')
                     ->addClass('atk-label')
-                    ->set($title['label']);
-                unset($title['label']);
+                    ->set($title['badge']);
+                unset($title['badge']);
             }
 
         }
@@ -67,19 +69,13 @@ abstract class Menu extends \View {
 
         if(is_array($title)) {
 
+            /*
             // Allow to set custom classes on a element
             if($title['a']) {
                 $this->setComponents($title['a'],'a');
                 unset($title['a']);
             }
-
-            if($title['label']) {
-                $i->add('View',null,'Badge')
-                    ->setElement('span')
-                    ->addClass('atk-label')
-                    ->set($title['label']);
-                unset($title['label']);
-            }
+             */
 
         }
         $i->set($title);

@@ -7,16 +7,19 @@ ul.atk-menu.atk-menu-horizontal(class="{$class}" id="{$_name}").atk-swatch-ink
 
     {Item}
     li.class(id="{$_name}")
-        a.atk-padding-small.atk-cells(href="javascript: void(0)" class="{$class}")
+        <a class="atk-padding-small atk-cells {$class}" id="{$_name}" href="{url}javascript:void(0){/}" {$attributes}>
+        {$icon}&nbsp;
+        strong
             {$Content}
+        </a>
     {/Item}
 
     {Menu}
     li(id="{$_name}")
         a.atk-padding-small.atk-cells(href="#" class="{$class}")
-            {$icon}
-            &nbsp;
-            {$Content}
+            {$icon}&nbsp;
+            strong
+                {$Content}
             span.icon-down-dir
         {$SubMenu}
     {/Menu}

@@ -2,6 +2,8 @@
 namespace romaninsh\menu;
 abstract class Menu extends \View {
 
+    public $swatch='light-ink';
+
     function init() {
         parent::init();
         $this->api->add('romaninsh/menu/Controller'); // if it's not there yet
@@ -32,14 +34,6 @@ abstract class Menu extends \View {
 
         if(is_array($title)) {
 
-            /*
-            // Allow to set custom classes on a element
-            if($title['a']) {
-                $this->setComponents($title['a'],'a');
-                unset($title['a']);
-            }
-             */
-
             if($title['badge']) {
                 $i->add('View',null,'Badge')
                     ->setElement('span')
@@ -51,7 +45,11 @@ abstract class Menu extends \View {
         }
 
         if($action){
-            $this->on('click',$action);
+            if(is_string($action)){
+                $i->template->set('url',$this->api->url($action));
+            }else{
+                $this->on('click',$action);
+            }
         }
 
         $i->set($title);

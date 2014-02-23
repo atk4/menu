@@ -5,7 +5,7 @@ class Item extends \View {
     function init() {
         parent::init();
 
-        $this->addComponents(['swatch'=>'ink']);
+        $this->addComponents(array('swatch'=>$this->owner->swatch));
     }
 
     function set($data){

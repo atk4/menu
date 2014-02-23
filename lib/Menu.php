@@ -17,7 +17,7 @@ abstract class Menu extends \View {
     function addTitle($title, $class='romaninsh/menu/Title') {
 
         $i = $this->add($class,null,null,
-            array_merge($this->defaultTemplate(),['Title'])
+            array_merge($this->defaultTemplate(),array('Title'))
         );
 
 
@@ -29,7 +29,7 @@ abstract class Menu extends \View {
     function addItem($title, $action=null, $class='romaninsh/menu/Item') {
 
         $i = $this->add($class,null,null,
-            array_merge($this->defaultTemplate(),['Item'])
+            array_merge($this->defaultTemplate(),array('Item'))
         );
 
         if(is_array($title)) {
@@ -62,7 +62,7 @@ abstract class Menu extends \View {
 
 
         $i = $this->add('romaninsh/menu/Item',null,null,
-            array_merge($this->defaultTemplate(),['Menu'])
+            array_merge($this->defaultTemplate(),array('Menu'))
         );
 
         if(is_array($title)) {
@@ -86,7 +86,7 @@ abstract class Menu extends \View {
 
     function addSeparator($class='romaninsh/Menu/Separator') {
         $i = $this->add($class,null,null,
-            $this->defaultTemplate()+['Separator']
+            $this->defaultTemplate()+array('Separator')
         );
 
         return $i;

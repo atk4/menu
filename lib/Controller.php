@@ -1,5 +1,5 @@
 <?php
-namespace romaninsh\menu;
+namespace atk4\menu;
 class Controller extends \Controller_Addon {
 
     public $atk_version='4.3';

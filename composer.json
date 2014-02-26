@@ -1,0 +1,27 @@
+{
+    "name": "atk4/menu",
+    "type": "library",
+    "description": "Menu addon for ATK4.3",
+    "homepage": "https://github.com/atk4/menu",
+    "keywords": ["atk4"],
+    "license": "AGPL",
+    "version": "1.0",
+    "authors": [
+        {
+            "name": "Romans",
+            "email": "romans@agile55.com"
+        }
+    ],
+    "source": {
+        "url": "git@github.com:atk4/menu.git",
+        "type": "git",
+        "reference": "origin/master"
+    },
+    "require": {
+        "atk4/atk4": ">=4.3",
+        "php": ">=5.3"
+    },
+    "autoload": {
+        "psr-0": {"menu": "lib"}
+    }
+}

@@ -1,5 +1,5 @@
 <?php
-namespace romaninsh\menu;
+namespace atk4\menu;
 abstract class Menu extends \View {
 
     public $swatch='light-ink';

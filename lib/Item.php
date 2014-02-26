@@ -1,5 +1,5 @@
 <?php
-namespace romaninsh\menu;
+namespace atk4\menu;
 class Item extends \View {
 
     function init() {
